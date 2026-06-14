@@ -1,65 +1,60 @@
 # DexSort
 
-DexSort is a local-first Android media organization project.
+DexSort is a private, local-first Android image archive assistant.
 
-Canonical repository:
+The Android tablet is the source archive. DexSort is designed to scan, map, tag, review, and eventually help sort large image libraries without uploading images to cloud services and without silently changing originals.
 
-```text
-https://github.com/westkitty/DexSort
-```
+## Canonical project rules
 
-## Source of truth
+- Android-first.
+- Tablet-first.
+- Local-first.
+- No BigMac/Mac dependency by default.
+- No cloud AI dependency.
+- No telemetry, analytics, remote logging, or automatic crash uploads.
+- No silent upload.
+- No silent delete, move, rename, metadata stripping, or original alteration.
+- AI proposes; the human approves.
+- Preserve provenance before proposing organization.
+- Build the no-AI safety spine first.
 
-The intended source-of-truth file is:
+Read the project Bible first:
 
 ```text
 DexSort_Project_Bible.md
 ```
 
-Platform write checks blocked creation of that filename during this seed pass, so the current README temporarily carries the project Bible summary until the file can be added from a normal local checkout.
+## Current repository purpose
 
-## Core project laws
+This repository has been seeded with the project Bible and initial build prompts. The first app-code commit should come from Google AI Studio Phases 1–5, then be hardened in Antigravity and validated in Android Studio/Gemini.
 
-1. Android-first.
-2. Tablet-first.
-3. Local-first runtime.
-4. No BigMac/Mac dependency by default.
-5. No cloud AI dependency in the app.
-6. No telemetry or remote logging.
-7. No destructive file actions in the MVP.
-8. AI proposes; the human approves.
-9. Preserve provenance before proposing organization.
-10. Build the no-AI safety spine first.
+## First build target
 
-## First build path
+Use:
 
-Use Google AI Studio for the first scaffold, then export the ZIP and import it into this repository. Use Antigravity for repo-level hardening. Use Android Studio/Gemini for Android build, permission, emulator, and device validation.
+```text
+docs/DexSort_AI_Studio_Phases_1_to_5_Prompt.md
+```
 
-## First five phases
+That prompt intentionally builds only the first MVP spine:
 
-1. App shell and onboarding.
+1. Android shell and onboarding.
 2. MediaStore scan and Room database.
 3. Provenance capture and device profiler.
 4. Favorites/manual import and exact duplicate skeleton.
-5. Multi-tag engine, concept-pack skeleton, and batch review UI.
+5. Multi-tag engine, concept pack skeleton, and batch review UI.
 
-Do not add embeddings, face recognition, network features, or destructive file actions before these phases pass.
+Do not add local AI embeddings, cloud features, face recognition, delete/move operations, or network permissions in the first build.
 
-## Early enhancements
+## Builder workflow
 
-- Fake-data mode for emulator testing.
-- Map Archive Only onboarding path.
-- Originals Untouched status badge.
-- Privacy Audit settings screen.
-- Needs Review and Low Confidence tags.
-- Why This Tag evidence panel.
-- Manual Favorites Import fallback.
-- Recovery / Oh No Mode placeholder.
+1. Use AI Studio to generate the Android scaffold.
+2. Export the generated project ZIP.
+3. Unpack it into this repository.
+4. Use Antigravity to harden Phases 1–5.
+5. Use Android Studio/Gemini for real Android validation.
+6. Append each meaningful work unit to `DexSort_Project_Bible.md`.
 
-## Stop conditions
+## Privacy warning
 
-Pause if generated code adds internet permission, Firebase, analytics, remote logging, destructive file actions, file mutation during scan, tags without evidence, or batch review that implies destructive action.
-
-## Next step
-
-Paste the AI Studio prompt from the local artifact into Google AI Studio Build mode, generate the Android scaffold, export ZIP, and import it here as the first app-code commit.
+Do not commit real private images, real archive manifests, private screenshots, real filenames, or personal folder paths. Use synthetic fixtures unless Andrew explicitly approves otherwise.
